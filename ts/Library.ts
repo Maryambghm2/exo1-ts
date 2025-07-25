@@ -20,13 +20,17 @@ export class Library {
     }
 
     findBookByTitle(title: string): Book | undefined {
-        return this.books.find(book => book.title == title);
+        return this.books.find(book => book.title === title);
     }
 
 
     listAvailableBooks(): Book[] {
         return this.books.filter(book => book.isAvailable);
 
+    }
+
+    getBookByAuthor(authorName : string) : Book[] {
+        return this.books.filter(book => book.author.name === authorName)
     }
 
 }
