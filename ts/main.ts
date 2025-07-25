@@ -1,6 +1,6 @@
 import { Author } from "./interfaces";
 import { Book } from "./interfaces";
-import { Library } from "./library"
+import { Library } from "./Library";
 
 function createBook(title: string, author: Author, pages: number, isAvailable?: boolean): Book {
     const book: Book = {
